@@ -1,0 +1,585 @@
+*{ /* Padrão site */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+body{
+    background-image: linear-gradient(to left, rgb(0, 0, 83), rgb(49, 0, 128));
+}
+
+
+
+.Center{ /*Header*/
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin:0 auto;
+    padding:0 2%;
+    
+}
+
+
+
+header{ 
+    background-color: white;
+    padding: 4px 0;    
+    border: 2px solid black;
+}
+
+
+
+.logo{ /*Logo Farma Life*/
+   width: 45%;
+
+
+}
+
+
+.menu{
+    padding-top: 50px;
+    width: 50%;
+    text-align: right;
+     
+    
+    
+    
+}
+
+.menu a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    
+    
+    
+}
+
+.menu a:hover{
+    color: rgb(50, 183, 249);
+
+  } /*Fim do Header*/
+
+
+
+ul{ /* Menu Dropdown*/
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 2px solid black;
+    
+    
+    
+    
+}
+
+ul li{
+    display: inline-block;
+    
+}
+
+ul li a{
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    color: rgb(34, 187, 119);
+    
+}
+
+ul li:hover{
+    background-color: rgb(17, 15, 15);
+    
+}
+
+ul ul{
+    position: absolute;
+    min-width: 75px;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+    background-color: rgb(57, 51, 51);
+    
+}
+
+ul li:hover ul{
+    display: block;
+} /*Fim do Menu dropdown*/
+
+
+
+
+
+.content{ /*Slides*/
+    margin-top: 150px;
+    height: 520px;
+    width: 923px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+  
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .9s;
+}
+  
+.bar:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    
+}
+
+.slide {
+    width: 20%;
+    transition: .6s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+  margin-left: 0;  
+}
+
+#slide2:checked ~ .s1{
+   margin-left: -20%; 
+}
+
+#slide3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+    margin-left: -80%;
+} 
+ /*Fim dos Slides*/
+
+
+
+
+ .card{
+    position:relative;
+    width: 320px;
+    height: 420px;
+    background-color: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 185px;
+    margin-top: 850px;
+}
+
+.card:before{
+ content: '';
+ position: absolute;
+ top: -50%;
+ width: 100%;
+ height: 100%;
+ background-color: #2196f3;
+ transform: skewY(345deg);
+ transition: 0.5s;
+}
+
+.card:hover::before{
+    transform: skewY(390deg);
+    top: -70%;
+
+}
+
+.card::after{
+    content: 'Remedio';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+
+.card .imgbx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card .imgbx .img{
+    max-width: 90%;
+    transition: 0.5s;
+}
+
+.card:hover .imgbx .img{
+    max-width: 70%;
+    
+}
+
+.card .contetbx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card .contetbx h3{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1px;
+}
+
+
+.card .contetbx .price{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.card .contetbx .buy{
+    position: relative;
+    top: 200px;
+    opacity: 1;
+    pad: 10px 30px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    background: #f32121;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    height: 25px;
+    
+}
+
+
+.card:hover .contetbx .buy{
+    top: 0px;
+    opacity: 1;
+
+}
+
+
+
+/*aaaa*/
+
+
+
+.card2{
+    position:relative;
+    width: 320px;
+    height: 420px;
+    background-color: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 580px;
+    bottom: 420px;
+}
+
+.card2:before{
+ content: '';
+ position: absolute;
+ top: -50%;
+ width: 100%;
+ height: 100%;
+ background-color: #2196f3;
+ transform: skewY(345deg);
+ transition: 0.5s;
+}
+
+.card2:hover::before{
+    transform: skewY(390deg);
+    top: -70%;
+
+}
+
+.card2::after{
+    content: 'Remedio';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+
+.card2 .imgbx2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card2 .imgbx2 .img{
+    max-width: 90%;
+    transition: 0.5s;
+}
+
+.card2:hover .imgbx2 .img{
+    max-width: 70%;
+    
+}
+
+.card2 .contetbx2{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card2 .contetbx2 h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1px;
+}
+
+
+.card2 .contetbx2 .price2{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.card2 .contetbx2 .buy2{
+    position: relative;
+    top: 200px;
+    opacity: 1;
+    pad: 10px 30px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    background: #21f3f0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    height: 25px;
+    
+}
+
+
+.card2:hover .contetbx2 .buy2{
+    top: 0px;
+    opacity: 1;
+
+}
+
+
+
+.card3{
+    position:relative;
+    width: 320px;
+    height: 420px;
+    background-color: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 980px;
+    bottom: 840px;
+}
+
+.card3:before{
+ content: '';
+ position: absolute;
+ top: -50%;
+ width: 100%;
+ height: 100%;
+ background-color: #2196f3;
+ transform: skewY(345deg);
+ transition: 0.5s;
+}
+
+.card3:hover::before{
+    transform: skewY(390deg);
+    top: -70%;
+
+}
+
+.card3::after{
+    content: 'Remedio';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+
+.card3 .imgbx3{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card3 .imgbx3 .img{
+    max-width: 90%;
+    transition: 0.5s;
+}
+
+.card3:hover .imgbx3 .img{
+    max-width: 70%;
+    
+}
+
+.card3 .contetbx3{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card3 .contetbx3 h3{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1px;
+}
+
+
+.card3 .contetbx3 .price3{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.card3 .contetbx3 .buy3{
+    position: relative;
+    top: 200px;
+    opacity: 1;
+    pad: 10px 30px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+    background: #21f3f0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    height: 25px;
+    
+}
+
+
+.card3:hover .contetbx3 .buy3{
+    top: 0px;
+    opacity: 1;
+
+}
+
+
+.chatbot{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 25px;
+    text-align: center;
+    z-index: 1000;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+
+
+
+  .footer { /*Rodapé*/
+    background-color: rgba(18, 18, 18);
+    color: #1B1919;
+    position: absolute;
+    top: 200%;
+    left: 0px;
+    width: 100%;
+    height: 160px;
+    text-align: center;
+    
+}
+
+
+.menudois{ /*Menu do rodapé*/
+    padding-top: 15px;
+    width: 89%;
+    text-align: right;
+}
+
+.menudois a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 37px;
+}
+
+.menudois a:hover{
+    color: blue;
+  }
+ 
+.logodois{
+    width: 15%;
+    height: 10%;
+    padding-top: 10px;
+}  /*Fim do menu do rodapé*/
